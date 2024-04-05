@@ -7,6 +7,9 @@ window.addEventListener('load', () => {
     const root = document.querySelector('#root');
 
     root.appendChild(heading);
+
+
+    
     heading.addEventListener('click', () =>{
     
         fetch('https://example-api-xvc9.onrender.com/getNewName')
