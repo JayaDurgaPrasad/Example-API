@@ -1,5 +1,9 @@
 // Import required modules
+const dotEnv = require('dotenv');
 const express = require('express');
+
+dotEnv.config();
+
 const cors = require('cors');
 
 const app = express();
@@ -37,7 +41,7 @@ app.get('/getNewName', updateName)
 
 
 // Start the server
-const PORT = 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
