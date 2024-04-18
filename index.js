@@ -1,18 +1,27 @@
 
 
-window.addEventListener('load', () => {
-    const heading = document.createElement('h1');
-    heading.innerHTML = "I'm not listening yet !"
+ window.addEventListener('load', () => {
+    
 
-    const root = document.querySelector('#root');
-
-    root.appendChild(heading);
-
+    const root = document.querySelector('div');
 
     
+        const heading = document.createElement('h1');
+        heading.innerHTML = "I'm not listening yet !";
+
+        root.appendChild(heading); 
+    
+
+    console.log(root);
+   
+
+    // root.appendChild(heading);
+
+
     heading.addEventListener('click', () =>{
     
-        fetch('https://example-api-xvc9.onrender.com/getNewName')
+       // fetch('https://example-api-xvc9.onrender.com/getNewName')
+        fetch('http://localhost:3000/getNewName')
         .then(response => response.text())
         .then(data => {
             console.log('Text from API:', typeof data);
@@ -24,4 +33,4 @@ window.addEventListener('load', () => {
 
     })
 
-})
+ })
